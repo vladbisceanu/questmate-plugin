@@ -1,0 +1,7 @@
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "forever-questmate"
+      description: "Forever Questmate: World of Warcraft: Forever characters and game data"
+      transport: "streamable_http"
+      url: "https://questmate.bisceanu.games/mcp"

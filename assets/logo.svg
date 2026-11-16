@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="title">
+  <title>Forever Questmate: a gold compass emblem around a teal heart with an AI spark</title>
+  <defs>
+    <linearGradient id="g-rim" gradientUnits="userSpaceOnUse" x1="0" y1="60" x2="0" y2="452">
+      <stop offset="0" stop-color="#FBE7AE"/>
+      <stop offset=".5" stop-color="#D9B266"/>
+      <stop offset="1" stop-color="#8E6429"/>
+    </linearGradient>
+    <linearGradient id="g-bevel" gradientUnits="userSpaceOnUse" x1="0" y1="76" x2="0" y2="436">
+      <stop offset="0" stop-color="#8E6429"/>
+      <stop offset="1" stop-color="#F2D48C"/>
+    </linearGradient>
+    <radialGradient id="g-heart" gradientUnits="userSpaceOnUse" cx="256" cy="200" r="210">
+      <stop offset="0" stop-color="#5FD6EC"/>
+      <stop offset=".45" stop-color="#1B8FB0"/>
+      <stop offset="1" stop-color="#0A3550"/>
+    </radialGradient>
+    <linearGradient id="g-spark" gradientUnits="userSpaceOnUse" x1="0" y1="140" x2="0" y2="380">
+      <stop offset="0" stop-color="#FFFBEA"/>
+      <stop offset="1" stop-color="#F2D48C"/>
+    </linearGradient>
+  </defs>
+  <g id="points">
+    <g id="point-n"><path d="M256 4L256 132L196 92Z" fill="#F6DFA0"/><path d="M256 4L316 92L256 132Z" fill="#B58A42"/></g>
+    <g transform="rotate(90 256 256)"><path d="M256 4L256 132L196 92Z" fill="#F6DFA0"/><path d="M256 4L316 92L256 132Z" fill="#B58A42"/></g>
+    <g transform="rotate(180 256 256)"><path d="M256 4L256 132L196 92Z" fill="#E3BF74"/><path d="M256 4L316 92L256 132Z" fill="#8E6429"/></g>
+    <g transform="rotate(270 256 256)"><path d="M256 4L256 132L196 92Z" fill="#F6DFA0"/><path d="M256 4L316 92L256 132Z" fill="#B58A42"/></g>
+    <g transform="rotate(45 256 256)"><path d="M256 40L256 120L224 98Z" fill="#E9CB85"/><path d="M256 40L288 98L256 120Z" fill="#9C7333"/></g>
+    <g transform="rotate(135 256 256)"><path d="M256 40L256 120L224 98Z" fill="#E9CB85"/><path d="M256 40L288 98L256 120Z" fill="#9C7333"/></g>
+    <g transform="rotate(225 256 256)"><path d="M256 40L256 120L224 98Z" fill="#D9B266"/><path d="M256 40L288 98L256 120Z" fill="#8E6429"/></g>
+    <g transform="rotate(315 256 256)"><path d="M256 40L256 120L224 98Z" fill="#E9CB85"/><path d="M256 40L288 98L256 120Z" fill="#9C7333"/></g>
+  </g>
+  <circle id="rim" cx="256" cy="256" r="196" fill="url(#g-rim)"/>
+  <circle id="bevel" cx="256" cy="256" r="176" fill="url(#g-bevel)"/>
+  <circle id="heart" cx="256" cy="256" r="162" fill="url(#g-heart)"/>
+  <path id="shine" d="M140 196A124 124 0 0 1 252 132" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="10" stroke-linecap="round"/>
+  <g id="spark">
+    <path d="M240 150C250 236 262 250 346 262C262 274 250 288 240 374C230 288 218 274 134 262C218 250 230 236 240 150Z" fill="url(#g-spark)"/>
+    <path d="M330 150C334 180 340 186 368 190C340 194 334 200 330 230C326 200 320 194 292 190C320 186 326 180 330 150Z" fill="url(#g-spark)"/>
+  </g>
+</svg>

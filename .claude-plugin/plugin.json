@@ -1,0 +1,22 @@
+{
+  "name": "forever-questmate",
+  "version": "1.0.0",
+  "description": "A friendly guide for World of Warcraft: Forever: knows your character, quests, talents, gear and dungeons, and coaches you through what to do next.",
+  "author": {
+    "name": "Bisceanu Games",
+    "email": "hello@bisceanu.games",
+    "url": "https://questmate.bisceanu.games"
+  },
+  "homepage": "https://questmate.bisceanu.games",
+  "repository": "https://github.com/vladbisceanu/questmate-plugin",
+  "license": "MIT",
+  "keywords": [
+    "world of warcraft",
+    "wow forever",
+    "gaming",
+    "quests",
+    "talents",
+    "guide"
+  ],
+  "privacyPolicyUrl": "https://questmate.bisceanu.games/privacy/"
+}

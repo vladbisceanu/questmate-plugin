@@ -1,0 +1,15 @@
+{
+  "name": "questmate",
+  "description": "Forever Questmate, a friendly guide for World of Warcraft: Forever.",
+  "owner": {
+    "name": "Bisceanu Games",
+    "email": "hello@bisceanu.games"
+  },
+  "plugins": [
+    {
+      "name": "forever-questmate",
+      "source": "./",
+      "description": "A friendly guide for World of Warcraft: Forever: knows your character, quests, talents, gear and dungeons, and coaches you through what to do next."
+    }
+  ]
+}

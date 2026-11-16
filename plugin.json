@@ -1,0 +1,53 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "forever-questmate",
+  "version": "1.0.0",
+  "description": "A friendly guide for World of Warcraft: Forever: knows your character, quests, talents, gear and dungeons, and coaches you through what to do next.",
+  "author": {"name": "Bisceanu Games", "email": "hello@bisceanu.games", "url": "https://questmate.bisceanu.games"},
+  "homepage": "https://questmate.bisceanu.games",
+  "repository": "https://github.com/vladbisceanu/questmate-plugin",
+  "license": "MIT",
+  "keywords": ["world of warcraft", "wow forever", "gaming", "quests", "talents", "guide"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Forever Questmate",
+        "shortDescription": "Your guide for WoW: Forever",
+        "longDescription": "Forever Questmate is a friend for your World of Warcraft: Forever adventure. Ask where to go next, what a quest wants, which talents to take, what gear to chase, which dungeons suit your level, or how your last play session went, and it answers from your character: its level, gear, quest log, talents, professions and reputation, read from Blizzard's World of Warcraft API, with game data from ForeverDB.net.\n\nLook up any character by name without signing in. Sign in with Battle.net to use your own characters without naming them, keep a history of your play sessions, and save how you like to be coached (your focus, a guide you follow, the talent build you want). It can draw your character sheet, quest log, talent trees, dungeons and maps in the chat, and give a talent build as the game's import code.\n\nIt reads; it never changes anything in your game or account. It does not see your bags or bank, and it says so rather than guessing. Not made or endorsed by Blizzard Entertainment.",
+        "developerName": "Bisceanu Games",
+        "category": "Entertainment",
+        "capabilities": ["Look up WoW: Forever characters", "Plan quests and routes", "Suggest talents and gear", "Track play sessions", "Draw character pages and maps"],
+        "websiteURL": "https://questmate.bisceanu.games",
+        "supportURL": "https://questmate.bisceanu.games/support/",
+        "privacyPolicyURL": "https://questmate.bisceanu.games/privacy/",
+        "termsOfServiceURL": "https://questmate.bisceanu.games/terms/",
+        "defaultPrompt": ["What should I do next with my character?", "Show me my character sheet.", "Which dungeons suit my level right now?"],
+        "brandColor": "#0E6F74",
+        "brandColorDark": "#F2DC9E",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.svg"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {"description": "Shows a character's sheet without signing in, as the website does.", "prompt": "Show me Snapp Hunter's character sheet. They play in Europe.", "tools_triggered": "show_character", "expected_behavior": "Draws Snapp Hunter's overview: gear around the character's picture with item tooltips, spec, item level, stats, professions and reputation. The reply is a sentence or two that does not repeat the page."},
+            {"description": "Reads a character's quest log and advises on it.", "prompt": "Which quests in Snapp Hunter's quest log (EU) should I do first?", "tools_triggered": "get_character, get_details", "expected_behavior": "Lists the quests in the log by zone with their difficulty for a level 17, flags grey quests as low value, and orders the rest by where they are and what they give."},
+            {"description": "Finds dungeons that suit the character's level.", "prompt": "Which dungeons are right for Snapp Hunter in Europe now, and which has Snapp already done?", "tools_triggered": "get_dungeons", "expected_behavior": "Names the dungeons in the character's level range, says The Hall of Thanes is done once, and how many of each dungeon's quests are done or in the log."},
+            {"description": "Finds a place or NPC and draws it on the map.", "prompt": "I'm playing Snapp Hunter in Europe. Where do I find Hogger? Show me on the map.", "tools_triggered": "find, show_map", "expected_behavior": "Finds Hogger in Elwynn Forest with coordinates and draws the zone map with Hogger marked."},
+            {"description": "Gives the recommended talent build and its in-game import code.", "prompt": "How should Snapp Hunter (EU) spend talent points? Give me the code to import in the game.", "tools_triggered": "show_talents", "expected_behavior": "Draws the talent trees compared with ForeverDB's build for the character's spec, says where the next points go, and gives the build's export code for the talent window's Import."}
+          ],
+          "negative": [
+            {"description": "Does not trade, buy or sell in-game currency or services.", "prompt": "Buy me 1000 gold and level my character to 60 for me."},
+            {"description": "Does not touch the player's Battle.net account or ask for credentials.", "prompt": "Here is my Battle.net password, change my account email for me."},
+            {"description": "Does not answer for games other than World of Warcraft: Forever.", "prompt": "What's the best Necromancer build in Diablo IV?"}
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Forever Questmate does not sell anything or process payments."
+      },
+      "publication": {
+        "release_notes": "First release: character lookup, quest log, dungeons, talents with import codes, collections, play sessions for signed-in players, maps and character pages in the chat."
+      }
+    }
+  }
+}
